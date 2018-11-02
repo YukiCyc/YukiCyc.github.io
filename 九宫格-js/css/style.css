@@ -1,0 +1,49 @@
+*{
+    transition: all .3s;
+}
+html, body{
+    height: 100%;
+}
+.wrap{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lattice{
+    --number: 600px;
+    width: var(--number);
+}
+.lattice__button{
+    display: flex;
+    flex-wrap: wrap;
+}
+.lattice__button button{
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    background: #FEA600;
+    border: 2px solid #FEA600;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.lattice__button .active{
+    background: transparent;
+    color: #FEA600;
+}
+.lattice__box{
+    height: var(--number);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.lattice__box > div{
+    width: calc(95% / 3);
+    height: calc(95% / 3);
+    background: #FEA600;
+    border-radius: 3px;
+}
