@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+<!--Header background box-->
+<div class="head_back">
+    <div class="head wid">
+        <!--page title-->
+        <h1>Star Battle</h1>
+    </div>
+</div>
+<!--page background image-->
+<div class="wrap_back"></div>
+<!--page game board box -->
+<div class="game_board">
+    <!--Star Battle playing background and planets-->
+    <div class="back">
+        <img class="planet1" src="images/001-global.png" alt="">
+        <img class="planet2" src="images/006-mars.png" alt="">
+        <img class="planet3" src="images/012-jupiter.png" alt="">
+        <img class="planet4" src="images/011-planet-earth.png" alt="">
+        <img class="planet5" src="images/003-science-2.png" alt="">
+    </div>
+    <!--all event create box (PS: Ship, friend, oil, aestroid, playerShoot, shipShoot...)-->
+    <div class="page">
+    </div>
+    <!--game start box-->
+    <div class="start_modal">
+        <!--How to Play Star Battle title.-->
+        <h2>How to Play Star Battle.</h2>
+
+        <!--How to Play Star Battle content.-->
+        <ol>
+            <li>Move the spaceship using the sensible areas in the screen;</li>
+            <li>The timer present the time lapsed;</li>
+            <li>The fuel counter show the remain fuel;</li>
+            <li>During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented
+                in the space;
+            </li>
+            <li>You can shoot pressing Space Bar;</li>
+            <li>If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;</li>
+            <li>Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;</li>
+            <li>Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;</li>
+            <li>If you destroy a friendly spaceship, you lose 10 points;</li>
+            <li>During the flight, the spaceship needs to collect fuel in the space;</li>
+            <li>You can pause the game clicking in a button pause, or pressing the letter "p";</li>
+            <li>Go beyond all limits;Battle in Space with Star Battle Championship...</li>
+        </ol>
+        <!--Start Game Button-->
+        <button id="start">Start Game</button>
+    </div>
+    <!--Logo image-->
+    <img src="images/logo-02.png" alt="" id="logo"/>
+    <!--player Ship-->
+    <img src="images/player.gif" alt="" id="player"/>
+    <!--show game information box-->
+    <div class="top">
+        <ul>
+            <!--oil number and range-->
+            <li>
+                <img src="images/oil.png" alt="">
+                <p class="oil_num">10</p>
+                <div class="then">
+                    <div class="length"></div>
+                </div>
+            </li>
+            <!--score number-->
+            <li>
+                <img src="images/score.png" alt="">
+                <p class="score_num">0</p>
+            </li>
+            <!--game timer number-->
+            <li>
+                <img src="images/time.png" alt="">
+                <p class="time_num">0</p>
+            </li>
+            <!--player shoot number-->
+            <li>
+                <img src="images/boom.png" alt="">
+                <p class="boom_num">0</p>
+            </li>
+            <!--change font-size -->
+            <li class="font">
+                <img class="num_up" src="images/add.png" alt="">
+                <p>Aa</p>
+                <img class="num_down" src="images/redu.png" alt="">
+            </li>
+
+            <li>
+                <!--Stop or play music button-->
+                <img src="images/mu_op.png" class="music" alt="">
+
+                <!--Stop or play game button-->
+                <img src="images/game_op.png" class="game" alt="">
+            </li>
+        </ul>
+        <audio src="" volume></audio>
+    </div>
+</div>
+
+<!--Star Battle description and video and image box-->
+<div class="body wid">
+    <div class="description wid">
+        <!--Star Battle description title-->
+        <b>Description:</b>
+        <!--Star Battle description content-->
+        <span>
+                Move the spaceship using the sensible areas in the screen;
+                The timer present the time lapsed;
+                The fuel counter show the remain fuel;
+                During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented in the space;
+                You can shoot pressing Space Bar;
+                If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;
+                Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;
+                Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;
+                If you destroy a friendly spaceship, you lose 10 points;
+                During the flight, the spaceship needs to collect fuel in the space;
+                You can pause the game clicking in a button pause, or pressing the letter "p";
+                Go beyond all limits;
+                Battle in Space with Star Battle Championship...
+            </span>
+    </div>
+    <div class="wid">
+        <!--Star Battle video-->
+        <video src="videos/star%20battle%20coming%20soon.mp4" controls autoplay="true"></video>
+        <!--Star Battle playing image-->
+        <div class="all_img">
+            <img src="playingImage/06.png" alt="">
+            <img src="playingImage/01.png" alt="">
+            <img src="playingImage/02.png" alt="">
+            <img src="playingImage/03.png" alt="">
+            <img src="playingImage/04.png" alt="">
+            <img src="playingImage/05.png" alt="">
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="media wid">
+        <img src="images/available-on-android.png" alt="">
+        <img src="images/available-on-ios.png" alt="">
+    </div>
+    <!--Star Battle CopyRight-->
+    <p>&copy; CopyRight in WordSkills ws10.</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

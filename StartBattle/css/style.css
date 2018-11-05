@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+}
+/*title font family*/
+h1, h2, h3, h4 {
+    font-family: "Agency FB";
+}
+
+/*set box width*/
+.wid {
+    width: 960px;
+    margin: 0 auto;
+}
+/*header background style*/
+.head_back {
+    width: 100%;
+    background: #ff8443;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(2, 2, 2, .2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+/*page title style*/
+h1 {
+    padding: 12px 0;
+}
+/*page body background style*/
+.wrap_back {
+    width: 100%;
+    height: calc(100% - 62px);
+    position: fixed;
+    top: 62px;
+    left: 0;
+    z-index: -1;
+    background: url('../images/background-4.png') no-repeat center / cover;
+}
+.body{
+    background: #fff;
+}
+.description{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.description b{
+    font-size: 26px;
+    font-family: "Agency FB";
+}
+/*Star Battle video style*/
+
+.body video{
+    width: 100%;
+}
+
+.all_img{
+    display: flex;
+    flex-wrap: wrap;
+    height: 350px;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.all_img img{
+    height: 150px;
+}
+footer{
+    background: #bd541d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.media{
+    display: flex;
+    justify-content: flex-end;
+}
+.media img{
+    height: 30px;
+    margin-left: 30px;
+}
+/*game board style*/
+.game_board {
+    width: 960px;
+    height: 480px;
+    margin: 150px auto;
+    position: relative;
+    overflow: hidden;
+}
+/*game board the box style*/
+.start_modal, .page, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.start_modal {
+    background: linear-gradient(45deg, #ff4f19, #db3f3d);
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(2, 2, 2, .2);
+    padding-top: 90px;
+    box-sizing: border-box;
+}
+/*show logo animation */
+#logo {
+    position: absolute;
+    height: 70px;
+    top: -70px;
+    left: 50%;
+    transition: all .3s;
+    transform: translateX(-50%);
+    animation: logo .3s linear forwards;
+}
+
+@keyframes logo {
+    to {
+        top: 5px;
+    }
+}
+/*show how to play title animation*/
+.game_board h2 {
+    margin-left: 30px;
+    transform: rotateX(90deg);
+    animation: h2 .3s linear .3s forwards;
+}
+
+@keyframes h2 {
+    to {
+        transform: rotateX(0deg);
+    }
+}
+/*show how to play content animation , some one in the script.js*/
+ol{
+    width: 85%;
+    margin: 0 auto;
+}
+ol li{
+    margin: 7px 0;
+    display: none;
+    font-size: 13px;
+}
+/*Start Game button style*/
+button {
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
+    background: #fe9e0d;
+    transition: all .3s;
+    transform: rotateX(90deg);
+    animation: h2 .3s linear 1.3s forwards;
+    cursor: pointer;
+    position: absolute;
+    left: calc(50% - 125px);
+    bottom: 30px;
+    color: #fff;
+    border: 1px solid #fe9e0d;
+}
+
+button:hover {
+    background: #fe650f;
+}
+/*playing background animation */
+.back{
+    background: url('../images/background-1.jpg');
+    animation: back 144s linear infinite;
+}
+@keyframes back{
+    to{
+        background-position: 400% 0;
+    }
+}
+/*playing planet animation */
+.back img{
+    filter: brightness(25%);
+    position: absolute;
+    left: 1100px;
+}
+.planet1{
+    top: 30px;
+    animation: go_left 15s linear forwards;
+}
+.planet2{
+    top: 200px;
+    animation: go_left 19s linear forwards;
+}
+.planet3{
+    top: 130px;
+    animation: go_left 22s linear forwards;
+}
+.planet4{
+    top: 320px;
+    animation: go_left 30s linear forwards;
+}
+.planet5{
+    top: 420px;
+    animation: go_left 36s linear forwards;
+}
+@keyframes go_left{
+    to{
+        transform: translateX(-1600px);
+    }
+}
+/*playing information style*/
+.top{
+    position: absolute;
+    width: 86%;
+    top: 5px;
+    font-size: 23px;
+    color: #fff;
+    right: 0;
+    display: none;
+}
+ul li{
+    list-style-type: none;
+    display: flex;
+}
+.top ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top p{
+    width: 26px;
+}
+.top img{
+    height: 25px;
+    margin: 0 10px;
+}
+.then{
+    position: relative;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.length{
+    width: 100%;
+    height: 27px;
+    background: linear-gradient(45deg, #ff4f19 0%,#ff4f19 25%, #fe650f 25%,#fe650f 50%,#ff4f19 50%,#ff4f19 75%, #fe650f 75%,#fe650f 100% );
+    position: absolute;
+    left: -50%;
+    transition: all .3s;
+}
+/*player ship style*/
+#player{
+    height: 10px;
+    position: absolute;
+    top: -300px;
+    left: 50px;
+    transition: all .5s;
+}
+/*Ship shoot style and Player shoot style*/
+.playerShoot, .shipShoot{
+    width: 40px;
+    height: 4px;
+    border-radius: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    background: #fff;
+    position: absolute;
+}
+
+.playerShoot{
+    box-shadow: 0px 0px 3px 3px deepskyblue;
+    animation: go_right 1.5s linear forwards;
+}
+.shipShoot{
+    box-shadow: 0px 0px 3px 3px red;
+    animation: go_left 3s linear forwards;
+}
+@keyframes go_right{
+    to{
+        transform: translateX(1100px);
+    }
+}
+
+.page span{
+    position: absolute;
+}
+.ship{
+    width: 80px;
+    height: 75px;
+    background: url('../images/ship_1.png');
+    animation: back .3s steps(4) infinite, go_left 6s linear forwards;
+    left: 1100px;
+}
+.aestroid{
+    width: 100px;
+    height: 100px;
+    left: 1100px;
+    background: url('../images/aestroid_brown.png') no-repeat center / cover;
+    animation: aestroid_rota 8s linear forwards;
+}
+@keyframes aestroid_rota{
+    to{
+        transform: translateX(-1200px) rotate(3600deg);
+    }
+}
+.friend{
+    width: 100px;
+    height: 50px;
+    left: 1100px;
+    background: url('../images/friend.gif') no-repeat center / cover;
+    animation: go_left 8s linear forwards;
+}
+.oil{
+    width: 40px;
+    height: 40px;
+    top: -100px;
+    background: url('../images/oil.png') no-repeat center / cover;
+    animation: oil_rota 6s linear forwards;
+}
+@keyframes oil_rota{
+    to{
+        transform: translateY(700px) rotate(360deg);
+    }
+}
+.num_down, .num_up, .music, .game{
+    cursor: pointer;
+}
+label{
+    width: 250px;
+    display: flex;
+    height: 50px;
+    position: absolute;
+    bottom: 130px;
+    left: calc(50% - 125px);
+    font-size: 30px;
+    align-items: center;
+}
+input{
+    width: 100%;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.4);
+    height: 100%;
+    font-size: 18px;
+    border-radius: 4px;
+    padding-left: 5px;
+}
+#continue{
+    cursor: no-drop;
+    opacity: .6;
+    transform: rotateX(0deg);
+}
+#over{
+    transform: rotateX(0deg);
+}
+.rank_top{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.rank_top h3{
+    width: 25%;
+    text-align: center;
+}
+#ranking{
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+    max-height: 260px;
+    overflow: auto;
+}
+#ranking::-webkit-scrollbar{
+    display: none;
+}
+#ranking li{
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+#ranking p{
+    width: 25%;
+    text-align: center;
+}
